@@ -77,6 +77,11 @@ a:hover{
     transition: 0.3s all;
 }
 
+img.logo{
+    width: 100px;
+    height: 100px;
+    border-radius: 100px;
+}
 #inscreva-se-btn{
     border: 2px solid rgb(132, 14, 201);
     padding: 10px;

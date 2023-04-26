@@ -1,38 +1,74 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="Pt-br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="styles/3.css">
-    <title>Document</title>
+    <link rel="shortcut icon" href="components/images/favicon_io/favicon.ico" type="image/x-icon">
+    <title>webSite</title>
 </head>
 <body>
-    <section class="finan">
-        <!-- Area Financeira -->
-            <main>
-                
-                <section id="transactions">
-                <h2>Transações</h2>
-                <ul id="transactions-list">
-                </ul>
-                </section>
-                <section id="add-transaction">
-                <h2>Adicionar transações</h2>
-                <form id="add-transaction-form">
-                    <div>
-                    <label for="transaction-amount">Valor:</label>
-                    <input type="number" id="transaction-amount" name="amount">
-                    </div>
-                    <div>
-                    <label for="transaction-description">Descrição:</label>
-                    <input type="text" id="transaction-description" name="description">
-                    </div>
+<!-- Cabeçalho -->
+<header>
+    <div id="title">
+        <img src="components/images/m.png" alt="" class="logo"> 
+    </div>
+
+    <ul>
+        <a href="index.html"><li>Início</li></a>
+        <a href="#"><li>Serviços</li></a>
+        <a href="#"><li>Sobre</li></a>
+        <a href="#"><li>Contato</li></a>
+        <a href="login.html" id="inscreva-se-btn"><li>Já tem uma conta?</li></a>
+    </ul>
+    <div class="menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+    </div>
+</header>
+<main>
+    <section class="home">
+    <!-- Area Financeira -->
+    <div class="home-text">
+        <h1 id="titulo">Controle Financeiro</h1>
+        <main>
+            <section id="balance">
+            <h2>Balanço-final</h2>
+            <p id="balance-amount">R$0.00</p>
+            </section>
+            <section id="transactions">
+            <h2>Transações</h2>
+            <ul id="transactions-list">
+            </ul>
+            </section>
+            <section id="add-transaction">
+            <h2>Adicionar transações</h2>
+            <form id="add-transaction-form">
+                <div>
+                <label for="transaction-amount">Valor:</label>
+                <input type="number" id="transaction-amount" name="amount">
+                </div>
+                <div>
+                <label for="transaction-description">Descrição:</label>
+                <input type="text" id="transaction-description" name="description">
+                </div>
+                <div class="div">
                     <button type="submit">Adicionar Transação</button>
-                </form>
-                </section>
-            </main>
-        </div>
+                    <button type="submit"onclick="removeLastTransaction()">Remover Transação</button>
+                    <button type="submit" onclick="clearTransactions()">Limpar</button>
+                    <button type="submit">Importar transações</button>
+                    <a href="components/images/th.webp" target="_blank" class="fim">Finalizar</a>
+                </div>
+            </form>
+            </section>
+        </main>
+    </div>
     </section>
+</main>
+<!-- Chamada Javascript -->
+<script src="script2.js"></script>
 </body>
 </html>
