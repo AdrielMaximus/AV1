@@ -1,0 +1,227 @@
+/* Fontes */
+@font-face {
+    font-family: 'poppinsblack';
+    src: url('../components/fonts/poppins-black-webfont.woff2') format('woff2'),
+        url('../components/fonts/poppins-black-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'poppinsbold';
+    src: url('../components/fonts/poppins-bold-webfont.woff2') format('woff2'),
+        url('../components/fonts/poppins-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    }
+@font-face {
+    font-family: 'poppinslight';
+    src: url('../components/fonts/poppins-light-webfont.woff2') format('woff2'),
+        url('../components/fonts/poppins-light-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'poppinsmedium';
+    src: url('../components/fonts/poppins-medium-webfont.woff2') format('woff2'),
+        url('../components/fonts/poppins-medium-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'poppinsregular';
+    src: url('../components/fonts/poppins-regular-webfont.woff2') format('woff2'),
+        url('../components/fonts/poppins-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'poppinssemibold';
+    src: url('../components/fonts/poppins-semibold-webfont.woff2') format('woff2'),
+        url('../components/fonts/poppins-semibold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+/* /fontes */
+/* Config Gerais do Site */
+body{
+    background-color: rgb(34, 34, 34);
+    color: white;
+    font-family: poppinsregular;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 15px;
+}
+
+header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.021);
+}
+
+#title{
+    flex-direction: column;
+    line-height: 10px;
+}
+
+li{
+    display: inline-block;
+    margin: 20px;
+}
+
+ul > a{
+    color: white;
+}
+
+ul > a:hover{
+    color: rgb(132, 14, 201);
+    transition: 0.3s all;
+}
+
+#inscreva-se-btn{
+    border: 2px solid rgb(132, 14, 201);
+    padding: 10px;
+    border-radius: 15px;
+}
+
+#inscreva-se-btn:hover{
+    background-color: rgb(132, 14, 201);
+    color: white;
+}
+
+h1{
+    font-weight: 200;
+}
+
+main{
+    display: flex;
+    flex-direction: row;
+    margin-top: 50px;
+}
+
+h2{
+    font-size: 56px;
+    line-height: 10px;
+    font-family: poppinsmedium;
+}
+
+span{
+    color: rgb(132, 14, 201);
+}
+
+p{
+    line-height: 20px;
+    max-width: 500px;
+    font-family: poppinslight;
+}
+
+img{
+    width: 580px;
+}
+
+aside > a{
+    height: 50px;
+    width: 150px;
+    background-color: rgb(132, 14, 201);
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    margin-top: 30px;
+    height: 20px;
+    padding: 15px;
+    border-radius: 20px;
+    border: none;
+    font-size: 15px;
+}
+aside >a:hover{
+    cursor: pointer;
+}
+
+/* /Config Gerais do Site */
+
+/* Area Capacitativa */
+section.home{
+    display: flex;
+}
+h1#curso{
+    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.178);
+}
+div.curso{
+    background-color: #27282c;
+    padding: 5px 20px 0px 20px;
+}
+
+.inicial{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 30vh;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+    
+}
+div.inicial a{
+    position: relative;
+    background-color: white;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 1.5em;
+    letter-spacing: 0.1em;
+    font-weight: 400;padding: 10px 30px;
+    transition: 0.5s;
+}
+div.inicial a:hover{
+    letter-spacing: 0.25em;
+    background: var(--clr);
+    color: var(--clr);
+    box-shadow: 0 0 35px var(--clr);
+}
+div.inicial a:before{
+    content: "";
+    position: absolute;
+    inset: 2px;
+    background: #27282c;
+}
+div.inicial a span{
+    position: relative;
+    z-index: 1;
+}
+div.inicial a i{
+    position: absolute;
+    inset: 0;
+    display: block;
+}
+div.inicial a i::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 80%;
+    width: 10px;
+    height: 4px;
+    background: #27282c;
+    transform: translateX(-40%) skewX(325deg);
+    transition: 0.5s;
+}
+div.inicial a:hover i::before{
+    width: 20px;
+    left: 20%;
+}
+div.inicial a i::after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 80%;
+    width: 10px;
+    height: 4px;
+    background: #27282c;
+    transform: translateX(-40%) skewX(325deg);
+    transition: 0.5s;
+}
+div.inicial a:hover i::after{
+    width: 20px;
+    left: 80%;
+}
+/* /Area capacitativa */
